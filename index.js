@@ -33,8 +33,8 @@ customElements.define('kaleidoscope-canvas', class KaleidoscopeCanvas extends HT
     this.CONFIG = {
       canvasWidth: Number(this.getAttribute('canvas-width')) || 800,
       canvasHeight: Number(this.getAttribute('canvas-height')) || 400,
-      triangleSide: Number(this.getAttribute('triangle-side')) || 120,
-      moveSpeed: Number(this.getAttribute('move-speed')) || 1 // 新增移动速度配置
+      triangleSide: Number(this.getAttribute('triangle-side')) || 150,
+      moveSpeed: Number(this.getAttribute('move-speed')) || 1
     };
     this.canvas.width = this.CONFIG.canvasWidth;
     this.canvas.height = this.CONFIG.canvasHeight;
