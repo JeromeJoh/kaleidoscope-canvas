@@ -47,7 +47,7 @@ customElements.define('kaleidoscope-canvas', class KaleidoscopeCanvas extends HT
 
   onImagesLoaded() {
     const { triangleSide, moveSpeed } = this.CONFIG;
-    const ctx = this.canvas.getContext('2d');
+    const ctx = this.canvas.getContext('2d', { willReadFrequently: true });
     const patDim = triangleSide;
     const SqrtOf3_4 = Math.sqrt(3) / 2;
     const height = SqrtOf3_4 * patDim;
