@@ -10,10 +10,10 @@ customElements.define('kaleidoscope-canvas', class KaleidoscopeCanvas extends HT
     this.shadowRoot.appendChild(this.canvas);
     this.baseImg = document.createElement('img');
     this.baseImg.style.display = 'none';
-    this.baseImg.src = this.getAttribute('base-src') || '/base.jpg';
+    this.baseImg.src = this.getAttribute('base-src') || 'base.jpg';
     this.baseRImg = document.createElement('img');
     this.baseRImg.style.display = 'none';
-    this.baseRImg.src = this.getAttribute('base-r-src') || '/baseR.jpg';
+    this.baseRImg.src = this.getAttribute('base-r-src') || 'baseR.jpg';
     this.shadowRoot.appendChild(this.baseImg);
     this.shadowRoot.appendChild(this.baseRImg);
   }
