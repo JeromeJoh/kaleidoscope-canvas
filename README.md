@@ -16,55 +16,34 @@
 
 ### About The Project
 
-A lightweight and customizable 3D animated butterfly component built with pure HTML, CSS, and SVG. This component provides a beautiful, floating butterfly animation that can be easily integrated into any web page to add a touch of dynamic flair and visual interest. The design is modular, allowing for seamless replacement of the central SVG element, making it highly versatile for various creative uses.
-
-### Installation
-
-Run this demo on a [local server](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server).
+This component is inspired by the article [Canvas Kaleidoscope](https://www.pepperoni.blog/canvas-kaleidoscope/) and provides an easy way to embed a customizable kaleidoscope animation into any web page. Built with pure HTML, CSS, and JavaScript, `<kaleidoscope-canvas>` lets you create dynamic visual effects with minimal setup. Simply add the component to your HTML and configure its attributes to achieve the desired kaleidoscope style.
 
 ### Customization
 
-The animation's core properties can be easily customized using data- attributes on the custom-butterfly-animation element. This allows you to control the animation's timing directly from your HTML without touching the CSS.
+You can configure the `<kaleidoscope-canvas>` web component using the following attributes:
 
-- **data-top:** Sets the vertical position offset from the center of scene.
+| Attribute       | Description                                 | Type   | Default      |
+| --------------- | ------------------------------------------- | ------ | ------------ |
+| `canvas-width`  | Width of the canvas in pixels               | Number | 800          |
+| `canvas-height` | Height of the canvas in pixels              | Number | 400          |
+| `triangle-side` | Side length of each triangle unit in pixels | Number | 150          |
+| `base-src`      | Path to the main pattern image              | String | `/base.jpg`  |
+| `base-r-src`    | Path to the reversed pattern image          | String | `/baseR.jpg` |
+| `move-speed`    | Movement speed of the pattern               | Number | 1            |
 
-  - _Value:_ A CSS length value (e.g., "-150px", "10vh").
+**Example usage:**
 
-  - _Default:_ 0px.
-
-- **data-left**: Sets the horizontal position offset from the center of scene.
-
-  - _Value:_ A CSS length value (e.g., "-150px", "10vh").
-
-  - _Default:_ 0px.
-
-- **data-main-animation-duration:** Controls the duration of the main floating and rotating animation.
-
-  - _Value:_ A CSS time value (e.g., "5s", "15s").
-
-  - _Default:_ 4s.
-
-- **data-wing-animation-duration:** Sets the duration for the wing flapping animation.
-
-  - _Value:_ A CSS time value (e.g., "0.75s", "0.2s").
-
-  - _Default:_ .45s
-
-- **data-fill-color:** Sets the fill color for the inner SVG.
-
-  - _Value:_ A CSS color value (e.g., "red", "#FF5733").
-
-  - _Default:_ (Inherits from CSS)
-
-- **data-stroke-color:** Sets the stroke (outline) color for the inner SVG.
-
-  - _Value:_ A CSS color value (e.g., "black", "rgba(0, 0, 0, 0.5)").
-
-  - _Default:_ (Inherits from CSS)
-
-- **dev:** A boolean attribute to enable a debug mode (e.g., for showing bounding boxes).
-
-  - _Value:_ Present or absent (e.g., <... dev>).
+```html
+<kaleidoscope-canvas
+  canvas-width="800"
+  canvas-height="400"
+  triangle-side="150"
+  base-src="/base.jpg"
+  base-r-src="/baseR.jpg"
+  move-speed="1"
+>
+</kaleidoscope-canvas>
+```
 
 ### Preview
 
